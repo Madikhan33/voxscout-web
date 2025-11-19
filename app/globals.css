@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #a855f7;
+  --color-primary-foreground: #ffffff;
+
+  /* Deep, rich dark mode background */
+  --color-background: #030303;
+  --color-surface: #0f0f0f;
+  --color-surface-highlight: #1a1a1a;
+
+  --color-border: #27272a;
+  --color-border-light: #3f3f46;
+
+  --color-text-primary: #ededed;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #52525b;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-DEFAULT: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+
+  --shadow-glow: 0 0 40px -10px rgba(168, 85, 247, 0.3);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  --animate-scroll: scroll 40s linear infinite;
+  --animate-spotlight: spotlight 2s ease .75s 1 forwards;
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -40%) scale(1);
+    }
+  }
+
+  @keyframes shimmer {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: -200% 0;
+    }
+  }
+}
+
+.direction-reverse {
+  animation-direction: reverse;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  /* Subtle noise texture can be added here if we have an asset, 
+     for now we'll use a very subtle gradient */
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.1), transparent 40%),
+    radial-gradient(circle at 0% 50%, rgba(168, 85, 247, 0.05), transparent 25%);
+  background-attachment: fixed;
+}
+
+/* Utilities */
+.glass {
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.6) 0%, rgba(15, 15, 15, 0.4) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #fff, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(to right, #fff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
