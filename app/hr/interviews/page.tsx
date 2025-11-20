@@ -5,28 +5,28 @@ import { Search, Filter, Plus, List, Users as UsersIcon, Calendar } from "lucide
 export default function HRInterviews() {
     const interviews = [
         {
-            title: "Frontend разработчик",
+            title: "Frontend Developer",
             position: "Senior Frontend Developer",
             status: "active",
             questions: 8,
             candidates: { current: 25, total: 100 },
-            created: "15.08.2023",
+            created: "Aug 15, 2023",
         },
         {
-            title: "AI/ML Инженер",
+            title: "AI/ML Engineer",
             position: "Middle AI Engineer",
             status: "active",
             questions: 12,
             candidates: { current: 18, total: 65 },
-            created: "02.08.2023",
+            created: "Aug 2, 2023",
         },
         {
-            title: "UX/UI Дизайнер",
+            title: "UX/UI Designer",
             position: "Lead UX/UI Designer",
             status: "archived",
             questions: 6,
             candidates: { current: 45, total: 150 },
-            created: "21.07.2023",
+            created: "Jul 21, 2023",
         },
         {
             title: "Project Manager",
@@ -34,7 +34,7 @@ export default function HRInterviews() {
             status: "active",
             questions: 10,
             candidates: { current: 3, total: 20 },
-            created: "19.08.2023",
+            created: "Aug 19, 2023",
         },
     ];
 
@@ -42,14 +42,14 @@ export default function HRInterviews() {
         <>
             <header className="flex flex-col sm:flex-row flex-wrap justify-between items-start sm:items-center gap-4 mb-8">
                 <div className="flex flex-col gap-1">
-                    <h1 className="text-white text-3xl font-bold tracking-tight">Интервью</h1>
+                    <h1 className="text-white text-3xl font-bold tracking-tight">Interviews</h1>
                     <p className="text-neutral-500 text-base font-normal">
-                        Создавайте и управляйте шаблонами интервью для кандидатов.
+                        Create and manage interview templates for candidates.
                     </p>
                 </div>
                 <button className="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold transition-colors cursor-pointer">
                     <Plus className="h-4 w-4" />
-                    <span>Создать интервью</span>
+                    <span>Create Interview</span>
                 </button>
             </header>
 
@@ -58,7 +58,7 @@ export default function HRInterviews() {
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 h-5 w-5" />
                     <input
                         className="w-full rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50 border border-neutral-800 bg-neutral-900/50 h-11 placeholder:text-neutral-500 px-4 pl-10 text-sm"
-                        placeholder="Поиск по названию или вакансии..."
+                        placeholder="Search by title or position..."
                         type="text"
                     />
                 </div>
@@ -66,13 +66,13 @@ export default function HRInterviews() {
                 <div className="flex gap-3 items-center">
                     <button className="flex h-11 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 border border-neutral-800 px-4 hover:border-purple-900/50 hover:bg-neutral-900/80 transition-all text-sm cursor-pointer">
                         <Filter className="h-4 w-4 text-neutral-500" />
-                        <p className="text-white font-medium">Фильтры</p>
+                        <p className="text-white font-medium">Filters</p>
                     </button>
                     <button className="flex h-11 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 border border-neutral-800 px-4 hover:border-purple-900/50 hover:bg-neutral-900/80 transition-all text-sm cursor-pointer">
                         <svg className="h-4 w-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
                         </svg>
-                        <p className="text-white font-medium">Сортировка</p>
+                        <p className="text-white font-medium">Sort</p>
                     </button>
                 </div>
             </div>
@@ -92,7 +92,7 @@ export default function HRInterviews() {
                                         : "bg-neutral-500/10 text-neutral-400 border border-neutral-500/20"
                                         }`}
                                 >
-                                    {interview.status === "active" ? "Активно" : "Архив"}
+                                    {interview.status === "active" ? "Active" : "Archived"}
                                 </span>
                             </div>
                             <p className="text-sm text-neutral-500 mb-5">{interview.position}</p>
@@ -102,7 +102,7 @@ export default function HRInterviews() {
                             <div className="flex justify-between items-center">
                                 <span className="flex items-center gap-2">
                                     <List className="h-4 w-4" />
-                                    Вопросов
+                                    Questions
                                 </span>
                                 <span className="font-medium text-white bg-neutral-800 px-2 py-0.5 rounded-md">
                                     {interview.questions}
@@ -112,7 +112,7 @@ export default function HRInterviews() {
                             <div className="flex justify-between items-center">
                                 <span className="flex items-center gap-2">
                                     <UsersIcon className="h-4 w-4" />
-                                    Кандидаты
+                                    Candidates
                                 </span>
                                 <span className="font-medium text-white bg-neutral-800 px-2 py-0.5 rounded-md">
                                     {interview.candidates.current} / {interview.candidates.total}
@@ -122,7 +122,7 @@ export default function HRInterviews() {
                             <div className="flex justify-between items-center">
                                 <span className="flex items-center gap-2">
                                     <Calendar className="h-4 w-4" />
-                                    Создано
+                                    Created
                                 </span>
                                 <span className="font-medium text-white">{interview.created}</span>
                             </div>

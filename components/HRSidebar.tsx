@@ -10,9 +10,9 @@ export function HRSidebar() {
     const [showProfileMenu, setShowProfileMenu] = useState(false);
 
     const navItems = [
-        { name: "Дашборд", href: "/hr/dashboard", icon: LayoutDashboard },
-        { name: "Интервью", href: "/hr/interviews", icon: Mic },
-        { name: "Кандидаты", href: "/hr/candidates", icon: Users },
+        { name: "Dashboard", href: "/hr/dashboard", icon: LayoutDashboard },
+        { name: "Interviews", href: "/hr/interviews", icon: Mic },
+        { name: "Candidates", href: "/hr/candidates", icon: Users },
     ];
 
     return (
@@ -61,7 +61,7 @@ export function HRSidebar() {
                                         'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmx9M3X3QDpJTIiBUqNa3HH4zc68YMka7JVPCPSpI7q1b__0DonJWrBKr3MGSRnHy4PbiZA_bhGy0AKpYfmj3fxXCsE2VGlENN4-8WBAef7hCDbO9plOwrc7_ix_XKoNTl4rCkswJpXCL6laqSAWWDEDEBXNOPpGbf73Z-pMifBWtmsELmEbWXOPWiFldo4R6rUKYOx4dLj1fhy-0zX-9-TyFHiT9ZpIaUpptc-RgNM-StvGE2WIjCa3T1eEQc-1tsd1s0pWWegth6")',
                                 }}
                             />
-                            <p className="text-sm font-medium leading-normal">Профиль</p>
+                            <p className="text-sm font-medium leading-normal">Profile</p>
                         </button>
 
                         {showProfileMenu && (
@@ -69,7 +69,7 @@ export function HRSidebar() {
                                 <div className="fixed inset-0 z-10" onClick={() => setShowProfileMenu(false)} />
                                 <div className="absolute bottom-full left-0 mb-2 w-full rounded-xl bg-neutral-900 border border-neutral-800 shadow-xl z-20 overflow-hidden">
                                     <div className="p-4 border-b border-neutral-800">
-                                        <p className="text-white font-semibold">Екатерина HR</p>
+                                        <p className="text-white font-semibold">Ekaterina HR</p>
                                         <p className="text-neutral-400 text-sm">ekaterina.hr@voxscout.com</p>
                                     </div>
                                     <div className="py-2">
@@ -81,7 +81,7 @@ export function HRSidebar() {
                                             <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                             </svg>
-                                            Настройки
+                                            Settings
                                         </Link>
                                     </div>
                                 </div>
@@ -91,12 +91,12 @@ export function HRSidebar() {
 
                     <button className="flex items-center gap-3 px-3 py-2 rounded-lg text-neutral-400 hover:bg-neutral-900 hover:text-white transition-all">
                         <HelpCircle className="h-5 w-5" />
-                        <p className="text-sm font-medium leading-normal">Поддержка</p>
+                        <p className="text-sm font-medium leading-normal">Support</p>
                     </button>
 
                     <Link href="/" className="flex items-center gap-3 px-3 py-2 rounded-lg text-neutral-400 hover:bg-neutral-900 hover:text-white transition-all">
                         <LogOut className="h-5 w-5" />
-                        <p className="text-sm font-medium leading-normal">Выйти</p>
+                        <p className="text-sm font-medium leading-normal">Log Out</p>
                     </Link>
                 </nav>
             </div>

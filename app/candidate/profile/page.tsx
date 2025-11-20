@@ -32,7 +32,7 @@ export default function Profile() {
                 </div>
 
                 <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-                    <h1 className="text-white text-2xl md:text-3xl font-bold">Екатерина Иванова</h1>
+                    <h1 className="text-white text-2xl md:text-3xl font-bold">Ekaterina Ivanova</h1>
                     <p className="text-neutral-400 mt-1">UI/UX Designer</p>
                     <div className="flex flex-col sm:flex-row items-center gap-4 mt-3 text-neutral-500 text-sm">
                         <div className="flex items-center gap-1.5">
@@ -49,22 +49,22 @@ export default function Profile() {
 
             {/* Resume */}
             <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 md:p-8">
-                <h2 className="text-white text-xl font-bold mb-4">Резюме</h2>
+                <h2 className="text-white text-xl font-bold mb-4">Resume</h2>
                 <div className="border border-neutral-800 rounded-lg p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
                         <FileText className="text-purple-400 h-8 w-8" />
                         <div>
                             <p className="text-white font-medium">resume_ivanova_e.pdf</p>
-                            <p className="text-neutral-500 text-xs">Загружено: 28 мая 2024</p>
+                            <p className="text-neutral-500 text-xs">Uploaded: May 28, 2024</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2">
                         <button className="bg-neutral-800 hover:bg-neutral-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors cursor-pointer">
-                            Редактировать
+                            Edit
                         </button>
                         <button className="bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2 cursor-pointer">
                             <Upload className="h-4 w-4" />
-                            Загрузить новое
+                            Upload New
                         </button>
                     </div>
                 </div>
@@ -75,11 +75,11 @@ export default function Profile() {
                 {/* Notifications */}
                 <div className="flex flex-col gap-8">
                     <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 md:p-8">
-                        <h2 className="text-white text-xl font-bold mb-5">Настройки уведомлений</h2>
+                        <h2 className="text-white text-xl font-bold mb-5">Notification Settings</h2>
                         <div className="space-y-4">
                             <div className="flex items-center justify-between">
                                 <label className="text-neutral-300" htmlFor="notif1">
-                                    Новые сообщения от HR
+                                    New Messages from HR
                                 </label>
                                 <button
                                     onClick={() => setNotifications({ ...notifications, messages: !notifications.messages })}
@@ -95,7 +95,7 @@ export default function Profile() {
 
                             <div className="flex items-center justify-between">
                                 <label className="text-neutral-300" htmlFor="notif2">
-                                    Статусы откликов
+                                    Application Status Updates
                                 </label>
                                 <button
                                     onClick={() => setNotifications({ ...notifications, applications: !notifications.applications })}
@@ -111,7 +111,7 @@ export default function Profile() {
 
                             <div className="flex items-center justify-between">
                                 <label className="text-neutral-300" htmlFor="notif3">
-                                    Рекомендации вакансий
+                                    Job Recommendations
                                 </label>
                                 <button
                                     onClick={() =>
@@ -131,10 +131,10 @@ export default function Profile() {
 
                     {/* Privacy */}
                     <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 md:p-8">
-                        <h2 className="text-white text-xl font-bold mb-5">Настройки конфиденциальности</h2>
+                        <h2 className="text-white text-xl font-bold mb-5">Privacy Settings</h2>
                         <div className="flex items-center justify-between">
                             <label className="text-neutral-300" htmlFor="privacy1">
-                                Сделать профиль видимым для компаний
+                                Make profile visible to companies
                             </label>
                             <button
                                 onClick={() => setPrivacy({ ...privacy, profileVisible: !privacy.profileVisible })}
@@ -152,11 +152,11 @@ export default function Profile() {
 
                 {/* Change Password */}
                 <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 md:p-8">
-                    <h2 className="text-white text-xl font-bold mb-5">Изменение пароля</h2>
+                    <h2 className="text-white text-xl font-bold mb-5">Change Password</h2>
                     <form className="space-y-4">
                         <div>
                             <label className="text-neutral-400 text-sm font-medium block mb-1.5" htmlFor="current_password">
-                                Текущий пароль
+                                Current Password
                             </label>
                             <input
                                 className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg text-white placeholder-neutral-500 px-4 py-2.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
@@ -167,7 +167,7 @@ export default function Profile() {
 
                         <div>
                             <label className="text-neutral-400 text-sm font-medium block mb-1.5" htmlFor="new_password">
-                                Новый пароль
+                                New Password
                             </label>
                             <input
                                 className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg text-white placeholder-neutral-500 px-4 py-2.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
@@ -178,7 +178,7 @@ export default function Profile() {
 
                         <div>
                             <label className="text-neutral-400 text-sm font-medium block mb-1.5" htmlFor="confirm_password">
-                                Подтвердите новый пароль
+                                Confirm New Password
                             </label>
                             <input
                                 className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg text-white placeholder-neutral-500 px-4 py-2.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
@@ -191,7 +191,7 @@ export default function Profile() {
                             className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2.5 px-4 rounded-lg transition-colors mt-2 cursor-pointer"
                             type="submit"
                         >
-                            Сохранить изменения
+                            Save Changes
                         </button>
                     </form>
                 </div>

@@ -7,21 +7,21 @@ export default function InterviewReport() {
     const params = useParams();
     const id = params.id;
 
-    // Mock data - в реальном приложении это будет загружаться из API
+    // Mock data - in a real application this would be loaded from API
     const reports: Record<string, any> = {
         "1": {
             title: "UI/UX Designer at TechCorp",
-            date: "28 мая 2024",
+            date: "May 28, 2024",
             overallScore: 9.2,
-            scoreLabel: "Отличный результат!",
+            scoreLabel: "Excellent result!",
             strengths: [
-                "Глубокое знание принципов UX/UI дизайна",
-                "Четкая и структурированная коммуникация",
-                "Примеры из релевантного опыта работы",
+                "Deep knowledge of UX/UI design principles",
+                "Clear and structured communication",
+                "Relevant work experience examples",
             ],
             improvements: [
-                "Можно подробнее раскрыть тему работы с дизайн-системами",
-                "При ответе на поведенческие вопросы, старайтесь использовать STAR метод",
+                "Could expand more on working with design systems",
+                "When answering behavioral questions, try using the STAR method",
             ],
             breakdown: [
                 { category: "Design Skills", score: 9.5, percentage: 95 },
@@ -31,30 +31,30 @@ export default function InterviewReport() {
             ],
             keyMoments: [
                 {
-                    question: "Расскажите о вашем опыте с дизайн-системами.",
+                    question: "Tell us about your experience with design systems.",
                     answer:
-                        "Кандидат продемонстрировал уверенное владение темой. Ответ был структурированным, с приведением конкретных примеров создания компонентов и работы с Figma. Особенно ценным был пример создания единой дизайн-системы для нескольких продуктов.",
+                        "The candidate demonstrated confident mastery of the topic. The answer was structured, with specific examples of creating components and working with Figma. Particularly valuable was the example of creating a unified design system for multiple products.",
                 },
                 {
-                    question: "Как бы вы подошли к редизайну существующего продукта?",
+                    question: "How would you approach redesigning an existing product?",
                     answer:
-                        "Ответ включал ключевые этапы: исследование пользователей, анализ конкурентов, создание прототипов и тестирование. Однако, не был упомянут анализ метрик и A/B тестирование. Рекомендуется глубже изучить data-driven подход к дизайну.",
+                        "The answer included key stages: user research, competitor analysis, prototyping, and testing. However, metric analysis and A/B testing were not mentioned. It is recommended to study data-driven design approaches more deeply.",
                 },
             ],
         },
         "2": {
             title: "Frontend Developer at Innovate LLC",
-            date: "25 мая 2024",
+            date: "May 25, 2024",
             overallScore: 8.5,
-            scoreLabel: "Хороший результат!",
+            scoreLabel: "Good result!",
             strengths: [
-                "Отличное знание React и современного JavaScript",
-                "Опыт работы с TypeScript и Next.js",
-                "Понимание принципов оптимизации производительности",
+                "Excellent knowledge of React and modern JavaScript",
+                "Experience with TypeScript and Next.js",
+                "Understanding of performance optimization principles",
             ],
             improvements: [
-                "Стоит углубить знания в области тестирования (Jest, React Testing Library)",
-                "Больше практики с CSS-in-JS решениями",
+                "Should deepen knowledge in testing (Jest, React Testing Library)",
+                "More practice with CSS-in-JS solutions",
             ],
             breakdown: [
                 { category: "Technical Skills", score: 9.0, percentage: 90 },
@@ -64,14 +64,14 @@ export default function InterviewReport() {
             ],
             keyMoments: [
                 {
-                    question: "Расскажите о вашем опыте с React Hooks.",
+                    question: "Tell us about your experience with React Hooks.",
                     answer:
-                        "Кандидат продемонстрировал уверенное владение темой. Ответ был структурированным, с приведением конкретных примеров использования useState, useEffect и useContext из прошлых проектов. Особенно ценным был пример создания кастомного хука для работы с API.",
+                        "The candidate demonstrated confident mastery of the topic. The answer was structured, with specific examples of using useState, useEffect, and useContext from past projects. Particularly valuable was the example of creating a custom hook for API work.",
                 },
                 {
-                    question: "Как бы вы подошли к оптимизации производительности веб-приложения?",
+                    question: "How would you approach optimizing web application performance?",
                     answer:
-                        "Ответ включал ключевые техники, такие как code-splitting, lazy loading и мемоизация компонентов. Однако, не был упомянут анализ бандла и использование инструментов вроде Lighthouse. Рекомендуется глубже изучить инструменты для профилирования производительности.",
+                        "The answer included key techniques such as code-splitting, lazy loading, and component memoization. However, bundle analysis and tools like Lighthouse were not mentioned. It is recommended to study performance profiling tools more deeply.",
                 },
             ],
         },
@@ -82,8 +82,8 @@ export default function InterviewReport() {
     return (
         <div className="max-w-5xl mx-auto">
             <div className="mb-8">
-                <h1 className="text-3xl font-bold text-white">Отчет по интервью: {report.title}</h1>
-                <p className="text-neutral-500 mt-2">Проанализировано AI VoxScout ・ {report.date}</p>
+                <h1 className="text-3xl font-bold text-white">Interview Report: {report.title}</h1>
+                <p className="text-neutral-500 mt-2">Analyzed by AI VoxScout ・ {report.date}</p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -91,7 +91,7 @@ export default function InterviewReport() {
                 <div className="lg:col-span-1 flex flex-col gap-6">
                     {/* Overall Score */}
                     <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 text-center flex flex-col items-center justify-center">
-                        <h2 className="text-lg font-semibold text-white mb-4">Общая оценка</h2>
+                        <h2 className="text-lg font-semibold text-white mb-4">Overall Score</h2>
                         <div className="relative size-40">
                             <svg className="size-full -rotate-90" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
                                 <circle
@@ -121,7 +121,7 @@ export default function InterviewReport() {
 
                     {/* Strengths */}
                     <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6">
-                        <h2 className="text-lg font-semibold text-white mb-4">Сильные стороны</h2>
+                        <h2 className="text-lg font-semibold text-white mb-4">Strengths</h2>
                         <ul className="space-y-3">
                             {report.strengths.map((strength: string, idx: number) => (
                                 <li key={idx} className="flex items-start gap-3">
@@ -134,7 +134,7 @@ export default function InterviewReport() {
 
                     {/* Improvements */}
                     <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6">
-                        <h2 className="text-lg font-semibold text-white mb-4">Зоны роста</h2>
+                        <h2 className="text-lg font-semibold text-white mb-4">Areas for Improvement</h2>
                         <ul className="space-y-3">
                             {report.improvements.map((improvement: string, idx: number) => (
                                 <li key={idx} className="flex items-start gap-3">
@@ -150,7 +150,7 @@ export default function InterviewReport() {
                 <div className="lg:col-span-2 flex flex-col gap-6">
                     {/* Breakdown */}
                     <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6">
-                        <h2 className="text-lg font-semibold text-white mb-6">Детальная разбивка</h2>
+                        <h2 className="text-lg font-semibold text-white mb-6">Detailed Breakdown</h2>
                         <div className="space-y-5">
                             {report.breakdown.map((item: any, idx: number) => (
                                 <div key={idx}>
@@ -171,7 +171,7 @@ export default function InterviewReport() {
 
                     {/* Key Moments */}
                     <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6">
-                        <h2 className="text-lg font-semibold text-white mb-4">Расшифровка ключевых моментов</h2>
+                        <h2 className="text-lg font-semibold text-white mb-4">Key Moments Transcript</h2>
                         <div className="space-y-4">
                             {report.keyMoments.map((moment: any, idx: number) => (
                                 <div key={idx} className={idx > 0 ? "border-t border-neutral-800 pt-4" : ""}>

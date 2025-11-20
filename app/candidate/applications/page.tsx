@@ -7,41 +7,41 @@ export default function Applications() {
         {
             position: "UI/UX Designer",
             company: "Tech Solutions Inc.",
-            date: "15 мая 2024 г.",
+            date: "May 15, 2024",
             status: "reviewing",
-            statusText: "Рассматривается",
+            statusText: "Under Review",
             statusColor: "blue",
         },
         {
             position: "Product Manager",
             company: "Innovate Corp",
-            date: "12 мая 2024 г.",
+            date: "May 12, 2024",
             status: "invited",
-            statusText: "Приглашен",
+            statusText: "Invited",
             statusColor: "green",
         },
         {
             position: "Frontend Developer",
             company: "Creative Minds LLC",
-            date: "10 мая 2024 г.",
+            date: "May 10, 2024",
             status: "rejected",
-            statusText: "Отклонено",
+            statusText: "Rejected",
             statusColor: "red",
         },
         {
             position: "Data Scientist",
             company: "Future AI",
-            date: "5 мая 2024 г.",
+            date: "May 5, 2024",
             status: "sent",
-            statusText: "Отправлено",
+            statusText: "Sent",
             statusColor: "purple",
         },
         {
             position: "Senior Backend Engineer",
             company: "DataStream",
-            date: "2 мая 2024 г.",
+            date: "May 2, 2024",
             status: "archived",
-            statusText: "Архивировано",
+            statusText: "Archived",
             statusColor: "gray",
         },
     ];
@@ -72,7 +72,7 @@ export default function Applications() {
         <>
             <div className="flex flex-wrap justify-between gap-4 p-4">
                 <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">
-                    Мои отклики
+                    My Applications
                 </h1>
             </div>
 
@@ -85,7 +85,7 @@ export default function Applications() {
                             </div>
                             <input
                                 className="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-2 focus:ring-purple-500/50 border-none bg-neutral-900/50 h-full placeholder:text-neutral-500 px-4 pl-2 text-base font-normal leading-normal"
-                                placeholder="Поиск по вакансии или компании..."
+                                placeholder="Search by position or company..."
                             />
                         </div>
                     </label>
@@ -94,7 +94,7 @@ export default function Applications() {
                 <div className="flex gap-3 overflow-x-auto pb-2">
                     <button className="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 hover:bg-neutral-900/80 text-neutral-400 hover:text-white transition-colors pl-4 pr-3 border border-neutral-800 cursor-pointer">
                         <Filter className="h-4 w-4" />
-                        <p className="text-sm font-medium leading-normal">Статус</p>
+                        <p className="text-sm font-medium leading-normal">Status</p>
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
@@ -102,7 +102,7 @@ export default function Applications() {
 
                     <button className="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 hover:bg-neutral-900/80 text-neutral-400 hover:text-white transition-colors pl-4 pr-3 border border-neutral-800">
                         <Calendar className="h-4 w-4" />
-                        <p className="text-sm font-medium leading-normal">Дата</p>
+                        <p className="text-sm font-medium leading-normal">Date</p>
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
@@ -116,16 +116,16 @@ export default function Applications() {
                         <thead className="border-b border-b-neutral-800">
                             <tr className="bg-transparent">
                                 <th className="px-6 py-4 text-left text-neutral-500 w-[35%] text-xs font-medium tracking-wider uppercase">
-                                    Название вакансии
+                                    Position Title
                                 </th>
                                 <th className="px-6 py-4 text-left text-neutral-500 w-[25%] text-xs font-medium tracking-wider uppercase">
-                                    Компания
+                                    Company
                                 </th>
                                 <th className="px-6 py-4 text-left text-neutral-500 w-[20%] text-xs font-medium tracking-wider uppercase">
-                                    Дата отклика
+                                    Application Date
                                 </th>
                                 <th className="px-6 py-4 text-left text-neutral-500 w-[20%] text-xs font-medium tracking-wider uppercase">
-                                    Статус
+                                    Status
                                 </th>
                             </tr>
                         </thead>

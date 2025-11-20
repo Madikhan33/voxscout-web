@@ -16,7 +16,7 @@ export default function CandidateDashboard() {
                             }}
                         ></div>
                         <div className="flex flex-col items-center sm:items-start">
-                            <h1 className="text-white text-2xl font-bold leading-tight">Екатерина Иванова</h1>
+                            <h1 className="text-white text-2xl font-bold leading-tight">Ekaterina Ivanova</h1>
                             <Link
                                 href="#"
                                 className="text-purple-400 hover:text-purple-300 text-sm font-medium leading-normal mt-2 inline-flex items-center gap-1.5"
@@ -28,55 +28,55 @@ export default function CandidateDashboard() {
                                         d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                                     />
                                 </svg>
-                                <span>Просмотреть резюме</span>
+                                <span>View Resume</span>
                             </Link>
                         </div>
                     </div>
 
                     <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 flex flex-col justify-between gap-4">
-                        <h2 className="text-white text-lg font-bold">Общая статистика</h2>
+                        <h2 className="text-white text-lg font-bold">Overall Statistics</h2>
                         <div className="grid grid-cols-3 gap-4 text-center">
                             <div>
                                 <p className="text-purple-400 text-3xl font-bold">12</p>
-                                <p className="text-neutral-500 text-xs">Интервью</p>
+                                <p className="text-neutral-500 text-xs">Interviews</p>
                             </div>
                             <div>
                                 <p className="text-purple-400 text-3xl font-bold">8.7</p>
-                                <p className="text-neutral-500 text-xs">Средний балл</p>
+                                <p className="text-neutral-500 text-xs">Average Score</p>
                             </div>
                             <div>
                                 <p className="text-green-400 text-3xl font-bold">+15%</p>
-                                <p className="text-neutral-500 text-xs">Улучшение</p>
+                                <p className="text-neutral-500 text-xs">Improvement</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6">
-                    <h2 className="text-white text-lg font-bold mb-4">Последние интервью</h2>
+                    <h2 className="text-white text-lg font-bold mb-4">Recent Interviews</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="border border-neutral-800 rounded-lg p-4 flex flex-col gap-3 hover:bg-neutral-900/80 hover:border-purple-900/50 transition-all">
                             <p className="text-white font-semibold">UI/UX Designer at TechCorp</p>
-                            <p className="text-sm text-neutral-500">Дата: 28 мая 2024</p>
+                            <p className="text-sm text-neutral-500">Date: May 28, 2024</p>
                             <div className="flex items-center justify-between">
                                 <p className="text-sm text-neutral-400">
-                                    Результат: <span className="font-bold text-purple-400">9.2/10</span>
+                                    Result: <span className="font-bold text-purple-400">9.2/10</span>
                                 </p>
                                 <Link href="/candidate/interview-report/1" className="text-purple-400 hover:text-purple-300 text-xs font-medium">
-                                    Подробнее
+                                    Details
                                 </Link>
                             </div>
                         </div>
 
                         <div className="border border-neutral-800 rounded-lg p-4 flex flex-col gap-3 hover:bg-neutral-900/80 hover:border-purple-900/50 transition-all">
                             <p className="text-white font-semibold">Frontend Developer at Innovate LLC</p>
-                            <p className="text-sm text-neutral-500">Дата: 25 мая 2024</p>
+                            <p className="text-sm text-neutral-500">Date: May 25, 2024</p>
                             <div className="flex items-center justify-between">
                                 <p className="text-sm text-neutral-400">
-                                    Результат: <span className="font-bold text-purple-400">8.5/10</span>
+                                    Result: <span className="font-bold text-purple-400">8.5/10</span>
                                 </p>
                                 <Link href="/candidate/interview-report/2" className="text-purple-400 hover:text-purple-300 text-xs font-medium">
-                                    Подробнее
+                                    Details
                                 </Link>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ export default function CandidateDashboard() {
 
             <div className="lg:col-span-1 flex flex-col gap-6">
                 <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6">
-                    <h2 className="text-white text-lg font-bold mb-4">Рекомендованные вакансии</h2>
+                    <h2 className="text-white text-lg font-bold mb-4">Recommended Positions</h2>
                     <div className="flex flex-col gap-4">
                         {["Senior Product Designer", "UX Researcher", "Lead UI Designer"].map((title, idx) => (
                             <div
@@ -101,7 +101,7 @@ export default function CandidateDashboard() {
                 </div>
 
                 <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6">
-                    <h2 className="text-white text-lg font-bold mb-4">Сохраненные компании</h2>
+                    <h2 className="text-white text-lg font-bold mb-4">Saved Companies</h2>
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-3 border border-neutral-800 rounded-lg p-3 hover:bg-neutral-900/80 hover:border-purple-900/50 transition-all cursor-pointer">
                             <div className="rounded-full size-10 bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold">
@@ -109,7 +109,7 @@ export default function CandidateDashboard() {
                             </div>
                             <div>
                                 <p className="font-semibold text-white">Alpha Solutions</p>
-                                <p className="text-xs text-neutral-500">12 активных вакансий</p>
+                                <p className="text-xs text-neutral-500">12 active positions</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-3 border border-neutral-800 rounded-lg p-3 hover:bg-neutral-900/80 hover:border-purple-900/50 transition-all cursor-pointer">
@@ -118,7 +118,7 @@ export default function CandidateDashboard() {
                             </div>
                             <div>
                                 <p className="font-semibold text-white">Beta Innovations</p>
-                                <p className="text-xs text-neutral-500">5 активных вакансий</p>
+                                <p className="text-xs text-neutral-500">5 active positions</p>
                             </div>
                         </div>
                     </div>

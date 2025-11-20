@@ -6,51 +6,51 @@ export default function Companies() {
     const companies = [
         {
             name: "TechCorp",
-            industry: "Технологии",
-            location: "Москва, Россия",
+            industry: "Technology",
+            location: "Moscow, Russia",
             employees: "500-1000",
             openPositions: 12,
-            description: "Ведущая технологическая компания, специализирующаяся на разработке инновационных решений для бизнеса.",
+            description: "Leading technology company specializing in innovative business solutions.",
         },
         {
             name: "Innovate LLC",
-            industry: "Стартап",
-            location: "Санкт-Петербург, Россия",
+            industry: "Startup",
+            location: "Saint Petersburg, Russia",
             employees: "50-200",
             openPositions: 8,
-            description: "Быстрорастущий стартап в области финтех с амбициозными планами на будущее.",
+            description: "Fast-growing fintech startup with ambitious plans for the future.",
         },
         {
             name: "DataFlow",
-            industry: "Аналитика данных",
-            location: "Москва, Россия",
+            industry: "Data Analytics",
+            location: "Moscow, Russia",
             employees: "200-500",
             openPositions: 15,
-            description: "Компания, предоставляющая решения для анализа больших данных и бизнес-аналитики.",
+            description: "Company providing solutions for big data analysis and business intelligence.",
         },
         {
             name: "Creative Minds",
-            industry: "Дизайн",
-            location: "Казань, Россия",
+            industry: "Design",
+            location: "Kazan, Russia",
             employees: "20-50",
             openPositions: 5,
-            description: "Креативное агентство, специализирующееся на дизайне и брендинге.",
+            description: "Creative agency specializing in design and branding.",
         },
         {
             name: "Future AI",
-            industry: "Искусственный интеллект",
-            location: "Москва, Россия",
+            industry: "Artificial Intelligence",
+            location: "Moscow, Russia",
             employees: "100-200",
             openPositions: 20,
-            description: "Исследовательская компания, работающая над передовыми AI-технологиями.",
+            description: "Research company working on cutting-edge AI technologies.",
         },
         {
             name: "DataStream",
-            industry: "Облачные технологии",
-            location: "Новосибирск, Россия",
+            industry: "Cloud Technologies",
+            location: "Novosibirsk, Russia",
             employees: "300-500",
             openPositions: 10,
-            description: "Провайдер облачных решений для enterprise-клиентов.",
+            description: "Provider of cloud solutions for enterprise clients.",
         },
     ];
 
@@ -58,7 +58,7 @@ export default function Companies() {
         <>
             <div className="mb-8">
                 <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] mb-6">
-                    Список компаний
+                    Company List
                 </h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -66,17 +66,17 @@ export default function Companies() {
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500 h-5 w-5" />
                         <input
                             className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg pl-11 pr-4 py-3 text-white placeholder:text-neutral-500 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-                            placeholder="Поиск компаний..."
+                            placeholder="Search companies..."
                             type="text"
                         />
                     </div>
 
                     <select className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors">
-                        <option>Все индустрии</option>
-                        <option>Технологии</option>
-                        <option>Финансы</option>
-                        <option>Дизайн</option>
-                        <option>Маркетинг</option>
+                        <option>All Industries</option>
+                        <option>Technology</option>
+                        <option>Finance</option>
+                        <option>Design</option>
+                        <option>Marketing</option>
                     </select>
                 </div>
             </div>
@@ -118,16 +118,16 @@ export default function Companies() {
                             </div>
                             <div className="flex items-center gap-2 text-neutral-500 text-sm">
                                 <Users className="h-4 w-4" />
-                                <span>{company.employees} сотрудников</span>
+                                <span>{company.employees} employees</span>
                             </div>
                             <div className="flex items-center gap-2 text-neutral-500 text-sm">
                                 <Briefcase className="h-4 w-4" />
-                                <span>{company.openPositions} открытых вакансий</span>
+                                <span>{company.openPositions} open positions</span>
                             </div>
                         </div>
 
                         <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 rounded-lg transition-colors cursor-pointer mt-auto">
-                            Посмотреть вакансии
+                            View Positions
                         </button>
                     </div>
                 ))}

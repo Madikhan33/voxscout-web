@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VoxScout - AI-интервью для кандидатов",
-  description: "VoxScout — ваш личный тренер для подготовки к собеседованиям. Пройдите AI-интервью, получите детальный анализ и уверенно шагните к работе мечты.",
+  title: "VoxScout - AI Interviews for Candidates",
+  description: "VoxScout is your personal coach for interview preparation. Take an AI interview, get detailed analysis, and confidently step towards your dream job.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className="dark">
+    <html lang="en" className="dark">
       <body
         className={`${inter.variable} antialiased bg-background-dark text-text-primary-dark font-sans`}
       >

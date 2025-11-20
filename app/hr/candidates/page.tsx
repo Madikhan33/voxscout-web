@@ -6,53 +6,53 @@ export default function HRCandidates() {
     const candidates = [
         {
             initials: "OR",
-            name: "Оливия Рай",
+            name: "Olivia Rhye",
             email: "olivia@example.com",
             position: "Frontend Developer",
             status: "review",
-            statusText: "На рассмотрении",
+            statusText: "Under Review",
             score: 85,
-            date: "15 янв, 2024",
+            date: "Jan 15, 2024",
         },
         {
             initials: "PB",
-            name: "Феникс Бейкер",
+            name: "Phoenix Baker",
             email: "phoenix@example.com",
             position: "UI/UX Designer",
             status: "accepted",
-            statusText: "Принят",
+            statusText: "Accepted",
             score: 92,
-            date: "14 янв, 2024",
+            date: "Jan 14, 2024",
         },
         {
             initials: "LS",
-            name: "Лана Штайнер",
+            name: "Lana Steiner",
             email: "lana@example.com",
             position: "Product Manager",
             status: "new",
-            statusText: "Новый",
+            statusText: "New",
             score: 78,
-            date: "12 янв, 2024",
+            date: "Jan 12, 2024",
         },
         {
             initials: "DW",
-            name: "Деми Уилкинсон",
+            name: "Demi Wilkinson",
             email: "demi@example.com",
             position: "Frontend Developer",
             status: "rejected",
-            statusText: "Отклонен",
+            statusText: "Rejected",
             score: 65,
-            date: "11 янв, 2024",
+            date: "Jan 11, 2024",
         },
         {
             initials: "CW",
-            name: "Кэндис Ву",
+            name: "Candice Wu",
             email: "candice@example.com",
             position: "UI/UX Designer",
             status: "review",
-            statusText: "На рассмотрении",
+            statusText: "Under Review",
             score: 88,
-            date: "10 янв, 2024",
+            date: "Jan 10, 2024",
         },
     ];
 
@@ -76,7 +76,7 @@ export default function HRCandidates() {
         <>
             <div className="flex flex-wrap justify-between items-center gap-4 mb-8">
                 <div className="flex flex-col gap-1">
-                    <h2 className="text-white text-3xl font-bold leading-tight tracking-tight">Кандидаты</h2>
+                    <h2 className="text-white text-3xl font-bold leading-tight tracking-tight">Candidates</h2>
                 </div>
             </div>
 
@@ -85,14 +85,14 @@ export default function HRCandidates() {
                     <Search className="text-neutral-500 absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5" />
                     <input
                         className="w-full rounded-lg text-neutral-200 focus:outline-0 focus:ring-2 focus:ring-purple-500 border border-neutral-800 bg-neutral-900/50 h-11 placeholder:text-neutral-500 pl-10 pr-4 text-base font-normal leading-normal transition-all"
-                        placeholder="Поиск по имени кандидата..."
+                        placeholder="Search by candidate name..."
                     />
                 </div>
 
                 <div className="flex gap-2.5 items-center flex-wrap">
                     <button className="flex h-11 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 border border-neutral-800 px-4 hover:border-purple-900/50 hover:bg-neutral-900/80 transition-all text-neutral-300 cursor-pointer">
                         <Tag className="text-neutral-500 h-4 w-4" />
-                        <p className="text-sm font-medium leading-normal">Статус: Все</p>
+                        <p className="text-sm font-medium leading-normal">Status: All</p>
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
@@ -100,7 +100,7 @@ export default function HRCandidates() {
 
                     <button className="flex h-11 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 border border-neutral-800 px-4 hover:border-purple-900/50 transition-all text-neutral-300">
                         <Briefcase className="text-neutral-500 h-4 w-4" />
-                        <p className="text-sm font-medium leading-normal">Вакансия: Все</p>
+                        <p className="text-sm font-medium leading-normal">Position: All</p>
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
@@ -108,7 +108,7 @@ export default function HRCandidates() {
 
                     <button className="flex h-11 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 border border-neutral-800 px-4 hover:border-purple-900/50 transition-all text-neutral-300">
                         <Star className="text-neutral-500 h-4 w-4" />
-                        <p className="text-sm font-medium leading-normal">Балл</p>
+                        <p className="text-sm font-medium leading-normal">Score</p>
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
@@ -122,22 +122,22 @@ export default function HRCandidates() {
                         <thead className="bg-neutral-900/40">
                             <tr>
                                 <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                                    Кандидат
+                                    Candidate
                                 </th>
                                 <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                                    Вакансия
+                                    Position
                                 </th>
                                 <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                                    Статус
+                                    Status
                                 </th>
                                 <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                                    Общий балл
+                                    Overall Score
                                 </th>
                                 <th className="px-6 py-3 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
-                                    Дата интервью
+                                    Interview Date
                                 </th>
                                 <th className="relative px-6 py-3">
-                                    <span className="sr-only">Действия</span>
+                                    <span className="sr-only">Actions</span>
                                 </th>
                             </tr>
                         </thead>
@@ -180,7 +180,7 @@ export default function HRCandidates() {
 
                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <button className="flex items-center gap-1.5 h-9 px-4 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm transition-colors cursor-pointer">
-                                            Детали
+                                            Details
                                         </button>
                                     </td>
                                 </tr>

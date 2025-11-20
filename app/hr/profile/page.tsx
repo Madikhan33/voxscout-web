@@ -13,7 +13,7 @@ export default function HRProfile() {
     return (
         <>
             <div className="mb-10">
-                <h1 className="text-3xl font-bold tracking-tight text-white">Настройки</h1>
+                <h1 className="text-3xl font-bold tracking-tight text-white">Settings</h1>
             </div>
 
             <div className="flex gap-12">
@@ -22,19 +22,19 @@ export default function HRProfile() {
                         className="px-4 py-2 text-sm rounded-lg font-medium text-white bg-neutral-900/50 transition-colors"
                         href="#profile"
                     >
-                        Профиль
+                        Profile
                     </a>
                     <a
                         className="px-4 py-2 text-sm rounded-lg font-medium text-neutral-400 hover:bg-neutral-900/50 hover:text-white transition-colors"
                         href="#notifications"
                     >
-                        Уведомления
+                        Notifications
                     </a>
                     <a
                         className="px-4 py-2 text-sm rounded-lg font-medium text-neutral-400 hover:bg-neutral-900/50 hover:text-white transition-colors"
                         href="#integrations"
                     >
-                        Интеграции
+                        Integrations
                     </a>
                 </nav>
 
@@ -42,16 +42,16 @@ export default function HRProfile() {
                     {/* Profile Section */}
                     <section className="mb-12" id="profile">
                         <div className="border-b border-neutral-800 pb-4 mb-8">
-                            <h2 className="text-white text-xl font-semibold">Профиль</h2>
+                            <h2 className="text-white text-xl font-semibold">Profile</h2>
                         </div>
 
                         <div className="flex flex-col gap-6 rounded-lg bg-neutral-900/50 backdrop-blur-sm p-6 border border-neutral-800">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <label className="flex flex-col flex-1">
-                                    <p className="text-white text-sm font-medium pb-2">Полное имя</p>
+                                    <p className="text-white text-sm font-medium pb-2">Full Name</p>
                                     <input
                                         className="flex w-full rounded-lg text-white placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-neutral-800 bg-neutral-900/50 h-12 px-4 text-base font-normal transition-colors"
-                                        defaultValue="Екатерина HR"
+                                        defaultValue="Ekaterina HR"
                                     />
                                 </label>
 
@@ -66,29 +66,29 @@ export default function HRProfile() {
 
                             <div className="flex justify-end gap-3 pt-2">
                                 <button className="px-5 py-2.5 rounded-lg text-sm font-semibold bg-purple-600 hover:bg-purple-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-purple-500 transition-colors cursor-pointer">
-                                    Сохранить изменения
+                                    Save Changes
                                 </button>
                             </div>
                         </div>
 
                         <div className="mt-8">
-                            <h3 className="text-lg font-semibold text-white mb-4">Изменить пароль</h3>
+                            <h3 className="text-lg font-semibold text-white mb-4">Change Password</h3>
                             <div className="flex flex-col gap-6 rounded-lg bg-neutral-900/50 backdrop-blur-sm p-6 border border-neutral-800">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <label className="flex flex-col flex-1">
-                                        <p className="text-white text-sm font-medium pb-2">Новый пароль</p>
+                                        <p className="text-white text-sm font-medium pb-2">New Password</p>
                                         <input
                                             className="flex w-full rounded-lg text-white placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-neutral-800 bg-neutral-900/50 h-12 px-4 text-base font-normal transition-colors"
-                                            placeholder="Введите новый пароль"
+                                            placeholder="Enter new password"
                                             type="password"
                                         />
                                     </label>
 
                                     <label className="flex flex-col flex-1">
-                                        <p className="text-white text-sm font-medium pb-2">Подтвердите новый пароль</p>
+                                        <p className="text-white text-sm font-medium pb-2">Confirm New Password</p>
                                         <input
                                             className="flex w-full rounded-lg text-white placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-neutral-800 bg-neutral-900/50 h-12 px-4 text-base font-normal transition-colors"
-                                            placeholder="Подтвердите новый пароль"
+                                            placeholder="Confirm new password"
                                             type="password"
                                         />
                                     </label>
@@ -96,7 +96,7 @@ export default function HRProfile() {
 
                                 <div className="flex justify-end gap-3 pt-2">
                                     <button className="px-5 py-2.5 rounded-lg text-sm font-semibold bg-purple-600 hover:bg-purple-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-purple-500 transition-colors">
-                                        Обновить пароль
+                                        Update Password
                                     </button>
                                 </div>
                             </div>
@@ -106,15 +106,15 @@ export default function HRProfile() {
                     {/* Notifications Section */}
                     <section className="mb-12" id="notifications">
                         <div className="border-b border-neutral-800 pb-4 mb-8">
-                            <h2 className="text-white text-xl font-semibold">Уведомления</h2>
+                            <h2 className="text-white text-xl font-semibold">Notifications</h2>
                         </div>
 
                         <div className="flex flex-col divide-y divide-neutral-800 rounded-lg bg-neutral-900/50 backdrop-blur-sm border border-neutral-800">
                             <div className="p-6 flex items-center justify-between">
                                 <div>
-                                    <p className="text-white font-medium">Кандидат завершил интервью</p>
+                                    <p className="text-white font-medium">Candidate Completed Interview</p>
                                     <p className="text-neutral-400 text-sm">
-                                        Получать уведомление, когда кандидат отправил свое AI-интервью.
+                                        Receive notification when a candidate submits their AI interview.
                                     </p>
                                 </div>
                                 <button
@@ -133,8 +133,8 @@ export default function HRProfile() {
 
                             <div className="p-6 flex items-center justify-between">
                                 <div>
-                                    <p className="text-white font-medium">Новое интервью запланировано</p>
-                                    <p className="text-neutral-400 text-sm">Получать уведомление о создании нового интервью.</p>
+                                    <p className="text-white font-medium">New Interview Scheduled</p>
+                                    <p className="text-neutral-400 text-sm">Receive notification when a new interview is created.</p>
                                 </div>
                                 <button
                                     onClick={() => setNotifications({ ...notifications, newInterview: !notifications.newInterview })}
@@ -150,9 +150,9 @@ export default function HRProfile() {
 
                             <div className="p-6 flex items-center justify-between">
                                 <div>
-                                    <p className="text-white font-medium">Еженедельный отчет</p>
+                                    <p className="text-white font-medium">Weekly Report</p>
                                     <p className="text-neutral-400 text-sm">
-                                        Получать еженедельный отчет о вашей рекрутинговой деятельности.
+                                        Receive a weekly report on your recruiting activity.
                                     </p>
                                 </div>
                                 <button
@@ -172,7 +172,7 @@ export default function HRProfile() {
                     {/* Integrations Section */}
                     <section className="mb-12" id="integrations">
                         <div className="border-b border-neutral-800 pb-4 mb-8">
-                            <h2 className="text-white text-xl font-semibold">Интеграции</h2>
+                            <h2 className="text-white text-xl font-semibold">Integrations</h2>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -184,12 +184,12 @@ export default function HRProfile() {
                                     <div>
                                         <p className="text-white font-semibold">Greenhouse</p>
                                         <p className="text-neutral-400 text-sm mt-1">
-                                            Синхронизируйте кандидатов и результаты интервью с вашей ATS.
+                                            Sync candidates and interview results with your ATS.
                                         </p>
                                     </div>
                                 </div>
                                 <button className="w-full px-5 py-2.5 rounded-lg text-sm font-semibold bg-green-500/20 text-green-400 border border-green-500/30">
-                                    Подключено
+                                    Connected
                                 </button>
                             </div>
 
@@ -201,12 +201,12 @@ export default function HRProfile() {
                                     <div>
                                         <p className="text-white font-semibold">Lever</p>
                                         <p className="text-neutral-400 text-sm mt-1">
-                                            Оптимизируйте свой процесс найма, подключившись к Lever.
+                                            Optimize your hiring process by connecting to Lever.
                                         </p>
                                     </div>
                                 </div>
                                 <button className="w-full px-5 py-2.5 rounded-lg text-sm font-semibold bg-neutral-800 hover:bg-neutral-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-purple-500 transition-colors cursor-pointer">
-                                    Подключить
+                                    Connect
                                 </button>
                             </div>
                         </div>

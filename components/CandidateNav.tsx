@@ -10,10 +10,10 @@ export function CandidateNav() {
     const [showProfileMenu, setShowProfileMenu] = useState(false);
 
     const navItems = [
-        { name: "Дашборд", href: "/candidate/dashboard" },
-        { name: "Мои отклики", href: "/candidate/applications" },
-        { name: "Практика", href: "/candidate/practice" },
-        { name: "Список компаний", href: "/candidate/companies" },
+        { name: "Dashboard", href: "/candidate/dashboard" },
+        { name: "My Applications", href: "/candidate/applications" },
+        { name: "Practice", href: "/candidate/practice" },
+        { name: "Company List", href: "/candidate/companies" },
     ];
 
     return (
@@ -64,7 +64,7 @@ export function CandidateNav() {
                             />
                             <div className="absolute right-0 mt-2 w-64 rounded-xl bg-neutral-900 border border-neutral-800 shadow-xl z-20 overflow-hidden">
                                 <div className="p-4 border-b border-neutral-800">
-                                    <p className="text-white font-semibold">Екатерина Иванова</p>
+                                    <p className="text-white font-semibold">Ekaterina Ivanova</p>
                                     <p className="text-neutral-400 text-sm">e.ivanova@email.com</p>
                                 </div>
                                 <div className="py-2">
@@ -76,7 +76,7 @@ export function CandidateNav() {
                                         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                         </svg>
-                                        Профиль
+                                        Profile
                                     </Link>
                                     <Link
                                         href="/"
@@ -86,7 +86,7 @@ export function CandidateNav() {
                                         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                         </svg>
-                                        Выйти
+                                        Log Out
                                     </Link>
                                 </div>
                             </div>

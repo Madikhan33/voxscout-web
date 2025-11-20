@@ -2,41 +2,41 @@
 
 export default function HRDashboard() {
     const recentCandidates = [
-        { initials: "OR", name: "Olivia Rhye", email: "olivia@email.com", score: "9.2/10", status: "Завершено", statusColor: "green" },
-        { initials: "PB", name: "Phoenix Baker", email: "phoenix@email.com", score: "8.8/10", status: "Завершено", statusColor: "green" },
-        { initials: "LS", name: "Lana Steiner", email: "lana@email.com", score: "8.5/10", status: "Завершено", statusColor: "green" },
-        { initials: "DW", name: "Demi Wilkinson", email: "demi@email.com", score: "7.9/10", status: "Завершено", statusColor: "green" },
-        { initials: "CW", name: "Candice Wu", email: "candice@email.com", score: "Без оценки", status: "В процессе", statusColor: "yellow" },
+        { initials: "OR", name: "Olivia Rhye", email: "olivia@email.com", score: "9.2/10", status: "Completed", statusColor: "green" },
+        { initials: "PB", name: "Phoenix Baker", email: "phoenix@email.com", score: "8.8/10", status: "Completed", statusColor: "green" },
+        { initials: "LS", name: "Lana Steiner", email: "lana@email.com", score: "8.5/10", status: "Completed", statusColor: "green" },
+        { initials: "DW", name: "Demi Wilkinson", email: "demi@email.com", score: "7.9/10", status: "Completed", statusColor: "green" },
+        { initials: "CW", name: "Candice Wu", email: "candice@email.com", score: "No score", status: "In Progress", statusColor: "yellow" },
     ];
 
     return (
         <>
             <header className="flex flex-wrap justify-between items-center gap-4 mb-8">
                 <div>
-                    <p className="text-white text-3xl font-bold leading-tight tracking-tight">Дашборд</p>
-                    <p className="text-neutral-500 mt-1">Ключевые метрики вашего процесса найма.</p>
+                    <p className="text-white text-3xl font-bold leading-tight tracking-tight">Dashboard</p>
+                    <p className="text-neutral-500 mt-1">Key metrics of your hiring process.</p>
                 </div>
             </header>
 
             {/* Stats Grid */}
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <div className="flex flex-col gap-2 rounded-lg p-6 bg-neutral-900/50 border border-neutral-800 hover:border-purple-900/50 transition-all backdrop-blur-sm">
-                    <p className="text-neutral-500 text-sm font-medium leading-normal">Активных интервью</p>
+                    <p className="text-neutral-500 text-sm font-medium leading-normal">Active Interviews</p>
                     <p className="text-white tracking-tight text-3xl font-bold leading-tight">12</p>
                 </div>
 
                 <div className="flex flex-col gap-2 rounded-lg p-6 bg-neutral-900/50 border border-neutral-800 hover:border-purple-900/50 transition-all backdrop-blur-sm">
-                    <p className="text-neutral-500 text-sm font-medium leading-normal">Приглашено кандидатов</p>
+                    <p className="text-neutral-500 text-sm font-medium leading-normal">Candidates Invited</p>
                     <p className="text-white tracking-tight text-3xl font-bold leading-tight">315</p>
                 </div>
 
                 <div className="flex flex-col gap-2 rounded-lg p-6 bg-neutral-900/50 border border-neutral-800 hover:border-purple-900/50 transition-all backdrop-blur-sm">
-                    <p className="text-neutral-500 text-sm font-medium leading-normal">Завершено интервью</p>
+                    <p className="text-neutral-500 text-sm font-medium leading-normal">Completed Interviews</p>
                     <p className="text-white tracking-tight text-3xl font-bold leading-tight">250</p>
                 </div>
 
                 <div className="flex flex-col gap-2 rounded-lg p-6 bg-neutral-900/50 border border-neutral-800 hover:border-purple-900/50 transition-all backdrop-blur-sm">
-                    <p className="text-neutral-500 text-sm font-medium leading-normal">Средний балл</p>
+                    <p className="text-neutral-500 text-sm font-medium leading-normal">Average Score</p>
                     <p className="text-white tracking-tight text-3xl font-bold leading-tight">
                         8.2<span className="text-xl text-neutral-500">/10</span>
                     </p>
@@ -46,27 +46,27 @@ export default function HRDashboard() {
             {/* Charts */}
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
                 <div className="flex flex-col gap-4 rounded-lg border border-neutral-800 p-6 bg-neutral-900/50 backdrop-blur-sm">
-                    <h3 className="text-white text-base font-medium leading-normal">Воронка конверсии</h3>
-                    <p className="text-neutral-500 text-sm -mt-2">За последние 30 дней</p>
+                    <h3 className="text-white text-base font-medium leading-normal">Conversion Funnel</h3>
+                    <p className="text-neutral-500 text-sm -mt-2">Last 30 days</p>
                     <div className="grid grid-cols-3 gap-4 text-center mt-2">
                         <div>
                             <p className="text-3xl font-bold text-purple-400">315</p>
-                            <p className="text-xs font-bold uppercase tracking-wider text-neutral-500 mt-2">Приглашены</p>
+                            <p className="text-xs font-bold uppercase tracking-wider text-neutral-500 mt-2">Invited</p>
                         </div>
                         <div>
                             <p className="text-3xl font-bold text-neutral-300">292</p>
-                            <p className="text-xs font-bold uppercase tracking-wider text-neutral-500 mt-2">Начали</p>
+                            <p className="text-xs font-bold uppercase tracking-wider text-neutral-500 mt-2">Started</p>
                         </div>
                         <div>
                             <p className="text-3xl font-bold text-neutral-300">250</p>
-                            <p className="text-xs font-bold uppercase tracking-wider text-neutral-500 mt-2">Завершили</p>
+                            <p className="text-xs font-bold uppercase tracking-wider text-neutral-500 mt-2">Completed</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="flex flex-col gap-4 rounded-lg border border-neutral-800 p-6 bg-neutral-900/50 backdrop-blur-sm">
-                    <h3 className="text-white text-base font-medium leading-normal">Распределение баллов</h3>
-                    <p className="text-neutral-500 text-sm -mt-2">За последние 30 дней</p>
+                    <h3 className="text-white text-base font-medium leading-normal">Score Distribution</h3>
+                    <p className="text-neutral-500 text-sm -mt-2">Last 30 days</p>
                     <div className="grid grid-cols-5 gap-2 text-center mt-2">
                         <div>
                             <p className="text-2xl font-bold text-neutral-300">12</p>
@@ -95,7 +95,7 @@ export default function HRDashboard() {
             {/* Recent Candidates */}
             <section>
                 <div className="rounded-lg border border-neutral-800 bg-neutral-900/50 backdrop-blur-sm p-6">
-                    <h3 className="text-white text-base font-medium leading-normal mb-4">Последние кандидаты</h3>
+                    <h3 className="text-white text-base font-medium leading-normal mb-4">Recent Candidates</h3>
                     <div className="flow-root">
                         <div className="-my-4 divide-y divide-neutral-800">
                             {recentCandidates.map((candidate, idx) => (
@@ -110,7 +110,7 @@ export default function HRDashboard() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="text-sm font-medium text-white">Балл: {candidate.score}</p>
+                                        <p className="text-sm font-medium text-white">Score: {candidate.score}</p>
                                         <span
                                             className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${candidate.statusColor === "green"
                                                     ? "bg-green-500/10 text-green-400 border border-green-500/20"
