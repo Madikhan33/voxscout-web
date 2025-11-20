@@ -1,6 +1,5 @@
 "use client";
 
-import { CandidateNav } from "@/components/CandidateNav";
 import { Search, Filter, Calendar } from "lucide-react";
 
 export default function Applications() {
@@ -70,106 +69,94 @@ export default function Applications() {
     };
 
     return (
-        <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden bg-black">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-950/20 via-black to-black"></div>
+        <>
+            <div className="flex flex-wrap justify-between gap-4 p-4">
+                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">
+                    Мои отклики
+                </h1>
+            </div>
 
-            <div className="relative z-10 layout-container flex h-full grow flex-col">
-                <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
-                    <div className="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
-                        <CandidateNav />
-
-                        <main className="flex-1 mt-8">
-                            <div className="flex flex-wrap justify-between gap-4 p-4">
-                                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">
-                                    Мои отклики
-                                </h1>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+                <div className="md:col-span-2">
+                    <label className="flex flex-col min-w-40 h-12 w-full">
+                        <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
+                            <div className="text-neutral-500 flex border-none bg-neutral-900/50 items-center justify-center pl-4 rounded-l-lg border-r-0">
+                                <Search className="h-5 w-5" />
                             </div>
+                            <input
+                                className="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-2 focus:ring-purple-500/50 border-none bg-neutral-900/50 h-full placeholder:text-neutral-500 px-4 pl-2 text-base font-normal leading-normal"
+                                placeholder="Поиск по вакансии или компании..."
+                            />
+                        </div>
+                    </label>
+                </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-                                <div className="md:col-span-2">
-                                    <label className="flex flex-col min-w-40 h-12 w-full">
-                                        <div className="flex w-full flex-1 items-stretch rounded-lg h-full">
-                                            <div className="text-neutral-500 flex border-none bg-neutral-900/50 items-center justify-center pl-4 rounded-l-lg border-r-0">
-                                                <Search className="h-5 w-5" />
-                                            </div>
-                                            <input
-                                                className="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-2 focus:ring-purple-500/50 border-none bg-neutral-900/50 h-full placeholder:text-neutral-500 px-4 pl-2 text-base font-normal leading-normal"
-                                                placeholder="Поиск по вакансии или компании..."
-                                            />
-                                        </div>
-                                    </label>
-                                </div>
+                <div className="flex gap-3 overflow-x-auto pb-2">
+                    <button className="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 hover:bg-neutral-900/80 text-neutral-400 hover:text-white transition-colors pl-4 pr-3 border border-neutral-800 cursor-pointer">
+                        <Filter className="h-4 w-4" />
+                        <p className="text-sm font-medium leading-normal">Статус</p>
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
 
-                                <div className="flex gap-3 overflow-x-auto pb-2">
-                                    <button className="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 hover:bg-neutral-900/80 text-neutral-400 hover:text-white transition-colors pl-4 pr-3 border border-neutral-800">
-                                        <Filter className="h-4 w-4" />
-                                        <p className="text-sm font-medium leading-normal">Статус</p>
-                                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </button>
-
-                                    <button className="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 hover:bg-neutral-900/80 text-neutral-400 hover:text-white transition-colors pl-4 pr-3 border border-neutral-800">
-                                        <Calendar className="h-4 w-4" />
-                                        <p className="text-sm font-medium leading-normal">Дата</p>
-                                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div className="px-4 py-3">
-                                <div className="flex overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/30">
-                                    <table className="w-full text-left">
-                                        <thead className="border-b border-b-neutral-800">
-                                            <tr className="bg-transparent">
-                                                <th className="px-6 py-4 text-left text-neutral-500 w-[35%] text-xs font-medium tracking-wider uppercase">
-                                                    Название вакансии
-                                                </th>
-                                                <th className="px-6 py-4 text-left text-neutral-500 w-[25%] text-xs font-medium tracking-wider uppercase">
-                                                    Компания
-                                                </th>
-                                                <th className="px-6 py-4 text-left text-neutral-500 w-[20%] text-xs font-medium tracking-wider uppercase">
-                                                    Дата отклика
-                                                </th>
-                                                <th className="px-6 py-4 text-left text-neutral-500 w-[20%] text-xs font-medium tracking-wider uppercase">
-                                                    Статус
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y divide-neutral-800">
-                                            {applications.map((app, idx) => (
-                                                <tr key={idx} className="hover:bg-neutral-900/50 transition-colors">
-                                                    <td className="h-[72px] px-6 py-4 w-[35%] text-white text-sm font-medium leading-normal">
-                                                        {app.position}
-                                                    </td>
-                                                    <td className="h-[72px] px-6 py-4 w-[25%] text-neutral-400 text-sm font-normal leading-normal">
-                                                        {app.company}
-                                                    </td>
-                                                    <td className="h-[72px] px-6 py-4 w-[20%] text-neutral-400 text-sm font-normal leading-normal">
-                                                        {app.date}
-                                                    </td>
-                                                    <td className="h-[72px] px-6 py-4 w-[20%] text-sm font-normal leading-normal">
-                                                        <div
-                                                            className={`inline-flex items-center gap-2 rounded-full py-1 px-3 border ${getStatusStyles(
-                                                                app.statusColor
-                                                            )}`}
-                                                        >
-                                                            <div className={`size-2 rounded-full ${getStatusDotColor(app.statusColor)}`}></div>
-                                                            <span className="text-xs font-medium">{app.statusText}</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </main>
-                    </div>
+                    <button className="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-neutral-900/50 hover:bg-neutral-900/80 text-neutral-400 hover:text-white transition-colors pl-4 pr-3 border border-neutral-800">
+                        <Calendar className="h-4 w-4" />
+                        <p className="text-sm font-medium leading-normal">Дата</p>
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </div>
+
+            <div className="px-4 py-3">
+                <div className="flex overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/30">
+                    <table className="w-full text-left">
+                        <thead className="border-b border-b-neutral-800">
+                            <tr className="bg-transparent">
+                                <th className="px-6 py-4 text-left text-neutral-500 w-[35%] text-xs font-medium tracking-wider uppercase">
+                                    Название вакансии
+                                </th>
+                                <th className="px-6 py-4 text-left text-neutral-500 w-[25%] text-xs font-medium tracking-wider uppercase">
+                                    Компания
+                                </th>
+                                <th className="px-6 py-4 text-left text-neutral-500 w-[20%] text-xs font-medium tracking-wider uppercase">
+                                    Дата отклика
+                                </th>
+                                <th className="px-6 py-4 text-left text-neutral-500 w-[20%] text-xs font-medium tracking-wider uppercase">
+                                    Статус
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-neutral-800">
+                            {applications.map((app, idx) => (
+                                <tr key={idx} className="hover:bg-neutral-900/50 transition-colors">
+                                    <td className="h-[72px] px-6 py-4 w-[35%] text-white text-sm font-medium leading-normal">
+                                        {app.position}
+                                    </td>
+                                    <td className="h-[72px] px-6 py-4 w-[25%] text-neutral-400 text-sm font-normal leading-normal">
+                                        {app.company}
+                                    </td>
+                                    <td className="h-[72px] px-6 py-4 w-[20%] text-neutral-400 text-sm font-normal leading-normal">
+                                        {app.date}
+                                    </td>
+                                    <td className="h-[72px] px-6 py-4 w-[20%] text-sm font-normal leading-normal">
+                                        <div
+                                            className={`inline-flex items-center gap-2 rounded-full py-1 px-3 border ${getStatusStyles(
+                                                app.statusColor
+                                            )}`}
+                                        >
+                                            <div className={`size-2 rounded-full ${getStatusDotColor(app.statusColor)}`}></div>
+                                            <span className="text-xs font-medium">{app.statusText}</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </>
     );
 }

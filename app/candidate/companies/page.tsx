@@ -1,6 +1,5 @@
 "use client";
 
-import { CandidateNav } from "@/components/CandidateNav";
 import { Search, Building2, MapPin, Users, Briefcase } from "lucide-react";
 
 export default function Companies() {
@@ -56,95 +55,83 @@ export default function Companies() {
     ];
 
     return (
-        <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden bg-black">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-950/20 via-black to-black"></div>
+        <>
+            <div className="mb-8">
+                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] mb-6">
+                    Список компаний
+                </h1>
 
-            <div className="relative z-10 layout-container flex h-full grow flex-col">
-                <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
-                    <div className="layout-content-container flex flex-col w-full max-w-[1100px] flex-1">
-                        <CandidateNav />
-
-                        <main className="flex-1 mt-8 p-4">
-                            <div className="mb-8">
-                                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] mb-6">
-                                    Список компаний
-                                </h1>
-
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                    <div className="md:col-span-2 relative">
-                                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500 h-5 w-5" />
-                                        <input
-                                            className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg pl-11 pr-4 py-3 text-white placeholder:text-neutral-500 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-                                            placeholder="Поиск компаний..."
-                                            type="text"
-                                        />
-                                    </div>
-
-                                    <select className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors">
-                                        <option>Все индустрии</option>
-                                        <option>Технологии</option>
-                                        <option>Финансы</option>
-                                        <option>Дизайн</option>
-                                        <option>Маркетинг</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {companies.map((company, idx) => (
-                                    <div
-                                        key={idx}
-                                        className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 hover:border-purple-900/50 transition-all"
-                                    >
-                                        <div className="flex items-start justify-between mb-4">
-                                            <div className="flex items-center gap-3">
-                                                <div className="size-12 rounded-lg bg-purple-950/30 flex items-center justify-center">
-                                                    <Building2 className="text-purple-400 h-6 w-6" />
-                                                </div>
-                                                <div>
-                                                    <h3 className="text-white font-bold text-lg">{company.name}</h3>
-                                                    <p className="text-neutral-500 text-sm">{company.industry}</p>
-                                                </div>
-                                            </div>
-                                            <button className="text-purple-400 hover:text-purple-300 transition-colors">
-                                                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                                                    />
-                                                </svg>
-                                            </button>
-                                        </div>
-
-                                        <p className="text-neutral-400 text-sm mb-4 line-clamp-2">{company.description}</p>
-
-                                        <div className="space-y-2 mb-4">
-                                            <div className="flex items-center gap-2 text-neutral-500 text-sm">
-                                                <MapPin className="h-4 w-4" />
-                                                <span>{company.location}</span>
-                                            </div>
-                                            <div className="flex items-center gap-2 text-neutral-500 text-sm">
-                                                <Users className="h-4 w-4" />
-                                                <span>{company.employees} сотрудников</span>
-                                            </div>
-                                            <div className="flex items-center gap-2 text-neutral-500 text-sm">
-                                                <Briefcase className="h-4 w-4" />
-                                                <span>{company.openPositions} открытых вакансий</span>
-                                            </div>
-                                        </div>
-
-                                        <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 rounded-lg transition-colors">
-                                            Посмотреть вакансии
-                                        </button>
-                                    </div>
-                                ))}
-                            </div>
-                        </main>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="md:col-span-2 relative">
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500 h-5 w-5" />
+                        <input
+                            className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg pl-11 pr-4 py-3 text-white placeholder:text-neutral-500 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
+                            placeholder="Поиск компаний..."
+                            type="text"
+                        />
                     </div>
+
+                    <select className="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors">
+                        <option>Все индустрии</option>
+                        <option>Технологии</option>
+                        <option>Финансы</option>
+                        <option>Дизайн</option>
+                        <option>Маркетинг</option>
+                    </select>
                 </div>
             </div>
-        </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {companies.map((company, idx) => (
+                    <div
+                        key={idx}
+                        className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 hover:border-purple-900/50 transition-all flex flex-col h-full"
+                    >
+                        <div className="flex items-start justify-between mb-4">
+                            <div className="flex items-center gap-3">
+                                <div className="size-12 rounded-lg bg-purple-950/30 flex items-center justify-center">
+                                    <Building2 className="text-purple-400 h-6 w-6" />
+                                </div>
+                                <div>
+                                    <h3 className="text-white font-bold text-lg">{company.name}</h3>
+                                    <p className="text-neutral-500 text-sm">{company.industry}</p>
+                                </div>
+                            </div>
+                            <button className="text-purple-400 hover:text-purple-300 transition-colors cursor-pointer">
+                                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <p className="text-neutral-400 text-sm mb-4 line-clamp-3 min-h-[3.6rem]">{company.description}</p>
+
+                        <div className="space-y-2 mb-4 flex-grow">
+                            <div className="flex items-center gap-2 text-neutral-500 text-sm">
+                                <MapPin className="h-4 w-4" />
+                                <span>{company.location}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-neutral-500 text-sm">
+                                <Users className="h-4 w-4" />
+                                <span>{company.employees} сотрудников</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-neutral-500 text-sm">
+                                <Briefcase className="h-4 w-4" />
+                                <span>{company.openPositions} открытых вакансий</span>
+                            </div>
+                        </div>
+
+                        <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 rounded-lg transition-colors cursor-pointer mt-auto">
+                            Посмотреть вакансии
+                        </button>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 }
